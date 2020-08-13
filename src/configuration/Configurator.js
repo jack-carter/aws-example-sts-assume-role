@@ -24,7 +24,7 @@ export default class Configurator {
     }
 
     PolicyArns(params) {
-        params.PolicyArns = [process.evn.TOKEN_SERVICE_ASSUMED_ROLE_POLICY_ARN || 'arn:aws:INVALID_POLICY_ARN']
+        params.PolicyArns = [process.env.TOKEN_SERVICE_ASSUMED_ROLE_POLICY_ARN || 'arn:aws:INVALID_POLICY_ARN']
         return this
     }
 
